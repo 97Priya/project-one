@@ -1,0 +1,35 @@
+<section id="contact" class="contact">
+    <div class="container" data-aos="fade-up">
+  
+      <div class="section-title">
+        <h2>Log-in</h2>
+        <p>Account</p>
+      </div>
+    </div>
+    <div class="container" data-aos="fade-up">
+      <div class="row mt-5">
+        <div class="col-lg-4"></div>
+    <div class="col-lg-8 mt-5 mt-lg-0">
+          <form [formGroup]="loginForm" (submit)="handleLogIn($event)"  method="post" role="form" class="php-email-form">
+            <div class="form-row">
+              <div class="col-md-6 form-group">
+                <input type="text"  class="form-control" formControlName="account_holder_name" id="name" placeholder="User Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <div class="validate"></div>
+              </div>
+              <div class="col-md-6 form-group">
+                <input type="password" class="form-control"  formControlName="account_number" id="email" placeholder="Password" data-rule="email" data-msg="Please enter a valid email" />
+                <div class="validate"></div>
+              </div>
+            </div>
+             
+            <div class="mb-3">
+              <div class="loading">Loading</div>
+              
+              <div *ngIf="isActive" class="sent-message">Log in Successfully. Thank you!</div>
+            </div>
+            <div class="text-center"><button type="submit">LogIn</button></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>

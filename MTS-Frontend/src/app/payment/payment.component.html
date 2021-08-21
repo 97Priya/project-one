@@ -1,0 +1,38 @@
+<section id="contact" class="contact">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-title">
+      <h2>Create</h2>
+      <p>Account</p>
+    </div>
+  </div>
+  <div class="container" data-aos="fade-up">
+    <div class="row mt-5">
+      <div class="col-lg-4"></div>
+  <div class="col-lg-8 mt-5 mt-lg-0">
+        <form [formGroup]="paymentForm" (submit)="handleTrx($event)" method="post" role="form" class="php-email-form">
+          <div class="form-row">
+            <div class="col-md-6 form-group">
+              <input type="number"  readonly class="form-control" id="fromAccount" [placeholder]="account.account_number" />
+              <div class="validate"></div>
+            </div>
+            <div class="col-md-6 form-group">
+              <input type="number" class="form-control" formControlName="toAccount" id="email" placeholder="Reciever Account"   />
+              <div class="validate"></div>
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="number" class="form-control" formControlName="amount" id="subject" placeholder="Amount"  />
+            <div class="validate"></div>
+          </div>  
+          <div class="mb-3">
+            <div class="loading">Loading</div>
+            <div *ngIf="paymentErrorStatus" class="error-message"></div>
+            <div *ngIf="paymentSucessStatus" class="sent-message">Transaction Successfull. Thank you!</div>
+          </div>
+          <div class="text-center"><button type="submit">Send IT</button></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

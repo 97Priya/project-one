@@ -1,0 +1,36 @@
+
+<section id="contact" class="contact">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-title">
+      <h2>Create</h2>
+      <p>Account</p>
+    </div>
+  </div>
+  <div class="container" data-aos="fade-up">
+    <div class="row mt-5">
+      <div class="col-lg-4"></div>
+  <div class="col-lg-8 mt-5 mt-lg-0">
+        <form [formGroup]="createAccForm" (submit)="handleAccCreate($event)" method="post" role="form" class="php-email-form">
+          <div class="form-row">
+            <div class="col-md-6 form-group">
+              <input type="text" formControlName="account_holder_name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" />
+              <div class="validate"></div>
+            </div>
+            <div class="col-md-6 form-group">
+              <input type="number" class="form-control" formControlName="balance" id="email" placeholder="Your Initial Balance" data-rule="email"  />
+              <div class="validate"></div>
+            </div>
+          </div>
+           
+          <div class="mb-3">
+            <div class="loading">Loading</div>
+            
+            <div *ngIf="accountCreationStatus" class="sent-message">Account Created Successfully. Thank you!</div>
+          </div>
+          <div class="text-center"><button type="submit">Create</button></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

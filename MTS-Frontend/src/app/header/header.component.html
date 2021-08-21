@@ -1,0 +1,18 @@
+<header id="header" class="fixed-top">
+  <div class="container d-flex align-items-center">
+   <h1 class="logo mr-auto"><a routerLink="/">Txr</a></h1>
+    <!-- Uncomment below if you prefer to use an image logo -->
+     <a routerLink="/" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
+    <nav class="nav-menu d-none d-lg-block " style="margin-left: 450px;">
+      <ul >
+        
+        <li ><a routerLink="/" >Home</a></li>
+        <li><a routerLink="createaccount" *ngIf="!isActive">Create Account</a></li>
+        <li class="font-weight-bold font-italic" style="color: #c7994b;" *ngIf="isActive">{{account.account_holder_name | uppercase }}</li>
+        <li><a routerLink="transactions" *ngIf="isActive">View Transactions</a></li> 
+        <li class="book-a-table text-center" *ngIf="isActive"><a routerLink="sendmoney">Send IT</a></li>
+      </ul>
+    </nav><!-- .nav-menu -->
+  </div>
+</header>
+  
