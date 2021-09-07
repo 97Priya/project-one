@@ -10,9 +10,9 @@ The Transaction History can be viewed via "Date Of Transaction" , or "Top N Tran
 
 The Transactions are viewd as page-numbers (pagination) to avoid the server load in heavy applications
 
+To run this appliaction you should have any java version above 8 and npm
 
-
-
+The backed part of Application run on port number 8081 and while 4200 for frontend
 
 
 
